@@ -1,0 +1,146 @@
+:root{
+    --font-family: arial, sans-serif;
+    --base-color: #282828;
+    --primary-color:#7a7a7a;
+    --base-font-size: 1rem;
+    --color-white: #fff;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    position:sticky;
+    background-color: #d3127d;
+    padding:10px;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+}
+
+nav > a{
+    color: #fff;
+}
+
+
+footer{
+    text-align: center;
+    background: #000;
+}
+
+body{
+    font:var(--base-font-size) var(--font-family);
+    background: #ffc800;
+    color: #fff;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    gap: 30px;
+    width: 600px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+main > div:not(:has(*)){
+    opacity: 0.4;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+main > div:not(:has(*))::before{
+    content: "coming soon..";
+    color: #000;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+
+.container{
+    width: 600px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+body:has(main) header{
+    margin-bottom: 10px;
+}
+
+div:empty{
+    width: 150px;
+    height: 230px;
+    
+}
+
+button{
+    background: rgb(94, 191, 239);
+    min-width: 70px;
+    border: 0;
+    color: #000;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+button:has(.icon){
+    background: rgb(216, 83, 218);
+}
+
+a{
+    font-size: 11px;
+}
+
+.content{
+    color: #000;
+}
+.content:has(h4) h2{
+    margin-bottom: 5px;
+}
+
+.content:has(h4) p{
+    margin-top: 5px;
+}
+
+.content p {
+    color: #7b7b7b;
+}
+
+img + div{
+    margin: 10px 0;
+}
+
+div > a {
+    padding: 20px;
+    color: #000;
+}
+a[href*="facebook"] {
+    background: url(../images/facebook.png) no-repeat left center;
+    background-size: 20px;
+ }
+ 
+ a[href*="twitter"] {
+     background: url(../images/twitter.png) no-repeat left center;
+     background-size: 20px;
+ }
+ 
+ a[href*="linkdin"] {
+     background: url(../images/instagram.png) no-repeat left center;
+     background-size: 20px;
+ }
+
+ a[download$="pdf"] {
+    background: url(../images/pdf.png) no-repeat left center;
+    background-size: 20px;
+}
+
+.icon{
+    background: url(../images/image.png) no-repeat left center;
+    background-size: 20px;
+    padding: 5px;
+    width: 10px;
+    display: inline-block;
+}
